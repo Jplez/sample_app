@@ -28,12 +28,17 @@ Spork.prefork do
     # examples within a transaction, comment the following line or assign false
     # instead of true.
     config.use_transactional_fixtures = true
+    
+    def test_sign_in(user)
+      controller.sign_in(user)
+    end
   end
-end
 
-Spork.each_run do
+
+  Spork.each_run do
   # This code will be run each time you run your specs.
   
+  end
 end
 
 # --- Instructions ---
